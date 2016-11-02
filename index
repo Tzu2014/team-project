@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<title>BMI Calculator</title>
+	</head>
+	<style>
+		div.ui-input-text { 
+			width: 200px !important 
+		}
+	</style>
+	<script language="javascript">
+		$(function() {
+		//GoButton click
+			$("#BMICompute").click( function()
+				{
+//						alert('button clicked');
+					var height = $( "#InputHeight" ).val();
+					var weight = $( "#InputWeight" ).val();
+//						alert(height + ' + ' + weight);
+						
+					var result = weight / (height * height); // compute BMI
+					var result2 = result.toFixed(2); // two decimal places
+//						alert(result2);
+					
+					var strOutput;
+					if(height=="" || weight==""){
+						strOutput = "Height or weight not filled.";
+						$("#result").html("<strong>" + strOutput + "</strong>");
+					}
+					else if(height >= 10){
+						strOutput = "Height must fill in meter.";
+						$("#result").html("<strong>" + strOutput + "</strong>");
+					}
+					else{
+						// output to interface
+						$("#result").html("<strong>Your height is " + height + "(m), weight is " + weight + "(kg)<br/>BMI = "+result2 + "</strong>");
+						
+						// give user some suggest
+						var suggestOutput;
+						if(result < 18.5){
+							suggestOutput = "Underweight";
+						}
+						else if(18.5 <= result && result <= 24){
+							suggestOutput = "Normal range";
+						}
+						else if(24 <= result && result <= 27){
+							suggestOutput = "Overweight";
+						}
+						else if(27 <= result && result <= 30){
+							suggestOutput = "Mild obesity";
+						}
+						else if(30 <= result && result <= 35){ 
+							suggestOutput = "Moderate obesity";
+						}
+						else{ 
+							suggestOutput = "Severe obesity";
+						}
+						$("#suggest").html("<strong>" + suggestOutput + "</strong>");
+					}
+					
+				}
+			);
+		// resetButton click
+			$("#reCompute").click( function()
+				{
+					$('#InputHeight').val('');
+					$('#InputWeight').val('');
+					
+					$("#result").html("");
+				}
+			);
+		});
+	
+	</script>
+	<body>  
+	  
+	<!-- HOME -->
+		<div data-role="page" id="home" data-theme="b">
+			<div data-role="header">
+				<h1>BMI Calculator</h1>
+			</div>
+			
+			<div data-role="content" align="center">	
+				<div class="ui-field-contain">
+					<label for="InputHeight">Height(m):</label>
+					<input type="text" name="name" id="InputHeight" value="" data-clear-btn="true">
+					<label for="InputWeight">Weight(kg):</label>
+					<input type="text" name="name" id="InputWeight" value="" data-clear-btn="true">
+				</div>	
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-a"><input type="button" name="name" id="BMICompute" value="GO~"></div>
+					<div class="ui-block-b"><input type="button" name="name" id="reCompute" value="reset"></div>
+				</fieldset>
+				<div>
+					<label id="result"></label>
+					<label id="suggest"></label>
+				</div>	
+			</div>
+			
+			<div data-role="footer">
+				<h5>by Tzu</h5>
+			</div>
+		</div>
+		
+	</body>
+</html>
