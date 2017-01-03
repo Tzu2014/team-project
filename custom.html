@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link href="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.css" rel="stylesheet" type="text/css" />
+		<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.js"></script>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<title>Index</title>
+	</head>
+	<body>  
+	  
+	<!-- 客戶 -->
+		<div data-role="page" id="custom">
+			<div data-role="header">
+				<h1>custom</h1>				
+				<a href="index.html" data-ajax="false" data-icon="home" class="ui-btn-right">home</a>
+				<a href="select.html" data-ajax="false" data-icon="back" class="ui-btn-left">back</a>
+			</div>
+			<div data-role="content">
+				<div>
+				<form class="ui-filterable">
+					<input id="myFilter" data-type="search">
+				</form>
+				<ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+					<li>
+						<a href="#"><h2 id="com1">瑞安</h2><p id="tel1">04-7984624</p></a>
+					</li>
+					<li>
+						<a href="#"><h2 id="com2">存義興</h2><p id="tel2">04-7980524</p></a>
+					</li>
+					<li>
+						<a href="#"><h2 id="com3">晨云</h2><p id="tel3">04-7569246</p></a>
+					</li>
+					<li>
+						<a href="#"><h2 id="com4">琪盛</h2><p id="tel4">04-7994562</p></a>
+					</li>
+				</ul>
+				</div>
+			</div>
+			
+			<div data-role="footer" data-position="fixed" data-fullscreen="true" align="center">
+				<a href="https://twitter.com/SMAP2016_2017" class="twitter-follow-button" data-show-count="false">Follow @SMAP2016_2017</a>  
+			</div>
+		</div>
+		
+	</body>
+</html>
