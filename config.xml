@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" 
+<widget id="com.phonegap.team-project" 
 		version="1.1.0" 
 		xmlns="http://www.w3.org/ns/widgets" 
 		xmlns:gap="http://phonegap.com/ns/1.0">
     <name>SMAP_BMI</name>
     <description>
-        BMI Calculator.
+        This is SMAP 2016 team-project.
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
-        Tzu-Yi Lin
+        Tzu-Yi Lin, Jervis Li, Ch Liu
     </author>
     <content src="index.html" />
     <access origin="*" />
