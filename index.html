@@ -16,7 +16,22 @@
 				version    : 'v2.8'
 				});
 			};
-			
+			window.twttr = (function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0],
+				t = window.twttr || {};
+				if (d.getElementById(id)) return t;
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "https://platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js, fjs);
+	
+				t._e = [];
+				t.ready = function(f) {
+					t._e.push(f);
+				};
+	
+				return t;
+			}(document, "script", "twitter-wjs"));
 		</script>
 	</head>
 	<body>  
@@ -27,11 +42,12 @@
 				<h1>Home</h1>
 				<a href="select.html" data-ajax="false" data-icon="arrow-r" class="ui-btn-right">選單</a>
 			</div>
-			<div data-role="content">
-				<p>歡迎使用~</p>
+			<div data-role="content" align="center">
+				<p align="center">歡迎使用~</p>
 				<!-- 
 				<input type="button" value="下一頁" onclick="self.location.href='#select'"/>
 				-->
+				<img src="res/icon/android/icon-48-mdpi.png"/>
 				<a href="select.html" data-ajax="false" data-role="button" data-icon="grid" data-iconpos="right">選單</a>
 				
 			</div>
