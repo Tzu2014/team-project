@@ -16,6 +16,13 @@
 				version    : 'v2.8'
 				});
 			};
+			window.fblike = (function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=701320236699090";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
 			window.twttr = (function(d, s, id) {
 				var js, fjs = d.getElementsByTagName(s)[0],
 				t = window.twttr || {};
@@ -53,16 +60,7 @@
 			</div>
 			<div data-role="footer" data-position="fixed" data-fullscreen="true" align="center">
 				<a href="https://twitter.com/SMAP2016_2017" class="twitter-follow-button" data-show-count="false">Follow @SMAP2016_2017</a>
-				<div id="fb-root"></div>	
-				<script>
-					(function(d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0];
-						if (d.getElementById(id)) return;
-						js = d.createElement(s); js.id = id;
-						js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=701320236699090";
-						fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));
-				</script>
+				<div id="fb-root"></div>
 				<div class="fb-like" 
 				data-href="https://www.facebook.com/SMAP-1803080646625372/" 
 				data-width="300" 
