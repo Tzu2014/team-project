@@ -6,10 +6,10 @@
 
 	<name>iFIMS4u</name>
 	<description>
-        This is SMAP 2016 team-project.
+        An intelligent and smarter way to help you manage your inventories and orders.
     </description>
 
-	<author email="support@phonegap.com" href="http://phonegap.com">
+	<author email="helen75369@gmail.com" href="http://ifims4u.appspot.com">
         Tzu-Yi Lin, Jervis Li, Ch Liu
     </author>
     <content src="index.html" />
